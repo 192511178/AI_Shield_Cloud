@@ -5,6 +5,7 @@ pandas
 numpy
 xgboost
 joblib
+scikit-learn
 reportlab
 mysql-connector-python
 gunicorn

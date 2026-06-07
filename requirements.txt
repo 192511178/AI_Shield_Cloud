@@ -1,4 +1,10 @@
 Flask
-Flask-MySQLdb
 Flask-Bcrypt
-mysqlclient
+Flask-MySQLdb
+pandas
+numpy
+xgboost
+joblib
+reportlab
+mysql-connector-python
+gunicorn

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Shield Cloud</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background:#0b1120;
+            color:white;
+        }
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:4rem;
+            font-weight:bold;
+        }
+
+        .hero p{
+            font-size:1.3rem;
+            color:#cbd5e1;
+        }
+
+        .feature-card{
+            background:#1e293b;
+            border:none;
+            color:white;
+            transition:0.3s;
+        }
+
+        .feature-card:hover{
+            transform:translateY(-8px);
+        }
+
+        .navbar{
+            background:#111827;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+            AI Shield Cloud
+        </a>
+
+        <div>
+            <a href="/login" class="btn btn-outline-info me-2">
+                Login
+            </a>
+
+            <a href="/register" class="btn btn-info">
+                Register
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>
+            AI Shield Cloud
+        </h1>
+
+        <p class="mt-4">
+            AI-Powered Real-Time DDoS Detection,
+            Classification and Automated Mitigation Framework
+        </p>
+
+        <div class="mt-4">
+
+            <a href="/register" class="btn btn-lg btn-info">
+                Get Started
+            </a>
+
+            <a href="/about" class="btn btn-lg btn-outline-light">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Features -->
+
+<div class="container mb-5">
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card feature-card p-4">
+                <h4>AI Detection</h4>
+                <p>
+                    XGBoost-based intelligent attack detection.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card feature-card p-4">
+                <h4>Attack Classification</h4>
+                <p>
+                    Detect SYN, UDP, HTTP and ICMP Floods.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card feature-card p-4">
+                <h4>Automated Mitigation</h4>
+                <p>
+                    Generate mitigation actions automatically.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

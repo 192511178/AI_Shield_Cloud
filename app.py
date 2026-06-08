@@ -89,34 +89,34 @@ Please Investigate Immediately.
         MIMEText(body, "plain")
     )
 
-    try:
+try:
+    server = smtplib.SMTP(
+        "smtp.gmail.com",
+        587,
+        timeout=10
+    )
 
-        server = smtplib.SMTP(
-            "smtp.gmail.com",
-            587
-        )
+    server.ehlo()
+    server.starttls()
+    server.ehlo()
 
-        server.starttls()
+    server.login(
+        EMAIL,
+        APP_PASSWORD
+    )
 
-        server.login(
-            EMAIL,
-            APP_PASSWORD
-        )
+    server.sendmail(
+        EMAIL,
+        EMAIL,
+        message.as_string()
+    )
 
-        server.sendmail(
-            EMAIL,
-            EMAIL,
-            message.as_string()
-        )
+    server.quit()
 
-        server.quit()
+    print("Email Alert Sent Successfully")
 
-        print("Email Alert Sent Successfully")
-
-    except Exception as e:
-
-        print("Email Error:", e)
-
+except Exception as e:
+    print("Email Error:", str(e))
 
 # -------------------------------
 # Home Page
@@ -416,12 +416,15 @@ def upload():
         mysql.connection.commit()
         cur.close()
 
-        send_attack_email(
-    suspicious_ip,
-    max_requests,
-    protocol,
-    risk_level
-)
+        try:
+            send_attack_email(
+                suspicious_ip,
+                attack_type,
+                confidence,
+                risk_level
+             )
+        except Exception as e:
+            print("Email Error:", e)
 
     return render_template(
         'analysis.html',
